@@ -1,0 +1,91 @@
+/* General page container */
+.landing-container {
+  background-color: #0d0d0d;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+}
+
+/* Main content box */
+.intro-box {
+  background-color: #1a1a1a;
+  border: 2px solid #d0021b; /* ABSA red */
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  max-width: 700px;
+  box-shadow: 0 0 25px rgba(208, 2, 27, 0.6);
+}
+
+/* Title styling */
+.title {
+  font-size: 2.6rem;
+  color: #d0021b;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Section styling */
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: #d0021b;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #d0021b;
+  padding-bottom: 4px;
+  letter-spacing: 0.8px;
+}
+
+.section p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 0.8rem;
+  color: #ddd;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section ul li {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ccc;
+}
+
+/* Button container to fix placement */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Start button styling */
+.start-button {
+  background-color: #d0021b;
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 4px 12px rgba(208, 2, 27, 0.7);
+  user-select: none;
+}
+
+.start-button:hover {
+  background-color: #a10016;
+  box-shadow: 0 6px 20px rgba(208, 2, 27, 0.9);
+}

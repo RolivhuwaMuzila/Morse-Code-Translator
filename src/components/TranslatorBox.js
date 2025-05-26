@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { lettersToMorseCode, morseCodeToLetters } from '../utils/morseUtils';
 import './TranslatorBox.css';
 
-// ✅ Use a reliable online beep
 const beep = new Audio('https://actions.google.com/sounds/v1/alarms/beep_short.ogg');
 
 export default function TranslatorBox() {
@@ -20,13 +19,18 @@ export default function TranslatorBox() {
     if (!text.trim()) return;
     const morseResult = lettersToMorseCode(text);
     setMorse(morseResult);
-    playBeep(); // simple feedback
+    playBeep();
   };
 
   const handleDecrypt = () => {
     if (!morse.trim()) return;
     const decoded = morseCodeToLetters(morse);
     setText(decoded);
+  };
+
+  const clearText = () => {
+    setText('');
+    setMorse('');
   };
 
   return (
@@ -54,7 +58,13 @@ export default function TranslatorBox() {
           🔓 Decrypt
         </button>
       </div>
+
+      {/* 🔴 Clear Button */}
+      <div className="clear-box">
+        <button onClick={clearText} className="clear-button">
+          🧹 Clear All
+        </button>
+      </div>
     </div>
   );
 }
-

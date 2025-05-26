@@ -24,7 +24,7 @@ textarea {
   width: 100%;
   min-height: 100px;       /* reduce height a bit */
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #aa0033; /* ABSA red */
   padding: 12px;
   resize: vertical;
   font-size: 1rem;
@@ -43,5 +43,32 @@ button {
 }
 
 button:hover {
+  background-color: #880027;
+}
+
+h3 {
+  color: #aa0033; /* ABSA red */
+}
+
+.clear-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Push closer to boxes */
+}
+
+.clear-button {
+  background-color: #aa0033; /* ABSA red */
+  color: white;
+  padding: 10px 16px;         /* Match other buttons */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;          /* Match Encrypt/Decrypt */
+  transition: background-color 0.3s;
+  min-width: 140px;           /* Optional: minimum size match */
+}
+
+.clear-button:hover {
   background-color: #880027;
 }

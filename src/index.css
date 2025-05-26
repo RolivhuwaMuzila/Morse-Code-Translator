@@ -1,0 +1,33 @@
+/* index.css – Only global or app-wide styles should go here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  background-color: #121212; /* optional: dark background for whole page */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* If you have reusable utility classes, they can stay here */
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+/* Add global link styling, if needed */
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Morse Code – R2-D2 Translator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Mission: Morse Code – R2-D2**! This React-based project allows you to translate text to Morse code and decode Morse code back into readable text. The app features an engaging landing page inspired by a secret agent briefing, setting the stage for your mission to help R2-D2 decode encrypted messages.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Landing Page:**  
+  An interactive landing page with mission briefing and key information about Morse code and the translator’s goals.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Morse Code Translator:**  
+  - Encode plain text into Morse code.  
+  - Decode Morse code back into plain text.  
+  - Audio beep feedback when encrypting messages, inspired by R2-D2’s sound effects.  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User-Friendly UI:**  
+  Clean, responsive design with styled text areas and buttons, using ABSA red for the color theme.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React  
+- React Router (for navigation)  
+- CSS for styling  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Open the app.  
+2. On the landing page, read the mission briefing.  
+3. Click **Start Translating** to go to the translator interface.  
+4. Enter your message in the **Encode** box to convert text to Morse code.  
+5. Enter Morse code in the **Decode** box to translate back to plain text.  
+6. Enjoy the R2-D2 style beep sounds when encrypting!
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app is ready to deploy!  
+**Deployment link:** _[Add your live deployment URL here]_  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation & Running Locally
 
-## Learn More
+1. Clone the repository:  
+   ```bash
+   git clone [repo-url]
+````
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navigate into the project folder:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   cd mission-morse-code-r2d2
+   ```
+3. Install dependencies:
 
-### Code Splitting
+   ```bash
+   npm install
+   ```
+4. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm start
+   ```
+5. Open `http://localhost:3000` in your browser to see the app in action.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+\[Your preferred license here]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+**Enjoy translating and may the Force be with you!**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -71,13 +71,6 @@ npm start
 http://localhost:3000
 ````
 
----
-
-## 📜 License
-
-MIT (or your license of choice)
-
----
 
 ## 🧠 Fun Fact
 

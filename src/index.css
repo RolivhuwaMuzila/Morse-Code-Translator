@@ -1,75 +1,33 @@
-body {
-  background: radial-gradient(#000000, #050505);
-  color: #00ffff;
-  font-family: 'Courier New', monospace;
+/* index.css – Only global or app-wide styles should go here */
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-.app {
-  padding: 2rem;
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  background-color: #121212; /* optional: dark background for whole page */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* If you have reusable utility classes, they can stay here */
+.text-center {
   text-align: center;
 }
 
-.landing {
-  color: white;
-  max-width: 700px;
-  margin: auto;
-}
-
-/* Full page center wrapper - vertical + horizontal centering */
-.translator-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;      /* vertical center */
-  gap: 2rem;
-  flex-wrap: wrap;
-  min-height: 100vh;        /* full viewport height */
-  padding: 1rem;
-  background: radial-gradient(#000000, #050505); /* match body bg for seamless look */
-}
-
-/* Box styling: smaller width, consistent padding, border, shadow */
-.box {
-  background: #111;
-  border: 1px solid #aa0033; /* ABSA red */
-  border-radius: 8px;
-  padding: 1rem;
-  width: 100px;              /* decreased from 300px */
-  box-shadow: 0 0 10px #00ffff44;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Textarea: fixed height, nice padding, same colors */
-textarea {
-  width: 100%;
-  height: 130px;             /* slightly smaller height */
-  background-color: #1c1c2b;
-  color: #00ffff;
-  font-family: 'Courier New', monospace;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 1rem;
-  resize: none;
-  font-size: 1rem;
-}
-
-/* Buttons same style as your existing */
-button {
-  background-color: #aa0033; /* ABSA red */
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+.mt-2 {
   margin-top: 0.5rem;
-  transition: background-color 0.3s;
-  font-size: 1rem;
 }
 
-button:hover {
-  background-color: #880027;
+/* Add global link styling, if needed */
+a {
+  text-decoration: none;
+  color: inherit;
 }
-

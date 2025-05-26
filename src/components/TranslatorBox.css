@@ -1,37 +1,42 @@
-.translator-container {
-  background-color: #fff;
+.translator-wrapper {
+  background-color: #000;        /* Black background */
+  color: white;                  /* White text */
   border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 30px;                 /* More padding */
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
   display: flex;
-  gap: 20px;
-  justify-content: center; /* center the boxes */
-  flex-wrap: wrap;
-  max-width: 350px;        /* reduce max width */
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;              /* Wider container */
+  min-height: 450px;             /* Taller container */
   margin: 40px auto;
   font-family: 'Courier New', Courier, monospace;
 }
 
+
 .box {
   flex: 1;
-  min-width: 140px;        /* smaller minimum width */
-  max-width: 400px;        /* limit max width */
+  min-width: 140px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 textarea {
   width: 100%;
-  min-height: 100px;       /* reduce height a bit */
+  min-height: 100px;
   border-radius: 8px;
-  border: 1px solid #aa0033; /* ABSA red */
+  border: 1px solid #aa0033;  /* ABSA red */
+  background-color: #111;      /* Dark background for textarea */
+  color: rgb(0, 225, 255);                /* White text */
   padding: 12px;
   resize: vertical;
   font-size: 1rem;
 }
 
 button {
-  background-color: #aa0033; /* ABSA red */
+  background-color: #aa0033;  /* ABSA red */
   color: white;
   padding: 10px 16px;
   border: none;
@@ -47,28 +52,36 @@ button:hover {
 }
 
 h3 {
-  color: #aa0033; /* ABSA red */
+  color: #aa0033;  /* ABSA red */
 }
 
 .clear-box {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Push closer to boxes */
+  margin-top: 10px;
 }
 
 .clear-button {
-  background-color: #aa0033; /* ABSA red */
+  background-color: #aa0033;
   color: white;
-  padding: 10px 16px;         /* Match other buttons */
+  padding: 10px 16px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;          /* Match Encrypt/Decrypt */
+  font-size: 0.9rem;
   transition: background-color 0.3s;
-  min-width: 140px;           /* Optional: minimum size match */
+  min-width: 140px;
 }
 
 .clear-button:hover {
   background-color: #880027;
+}
+
+/* 🧾 Footer Style */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;  /* lighter text for footer */
 }

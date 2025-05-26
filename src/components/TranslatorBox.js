@@ -65,6 +65,12 @@ export default function TranslatorBox() {
           🧹 Clear All
         </button>
       </div>
+
+      {/* 🔻 Footer */}
+      <footer className="footer">
+        <p>🔁 Morse Code – R2-D2 Translator | Built with ❤️ by Shawty</p>
+      </footer>
     </div>
   );
 }
+

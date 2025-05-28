@@ -1,117 +1,192 @@
+:root {
+  --absa-red: #a6192e;
+  --dark-bg: #121212;
+  --box-bg: #1e1e1e;
+  --textarea-bg: #2a2a2a;
+  --text-color: #f4f4f4;
+  --error-color: #ff6b6b;
+  --transition-speed: 0.3s;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: var(--dark-bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+/* Wrapper layout */
 .translator-wrapper {
-  background-color: #000;        /* Black background */
-  color: white;                  /* White text */
-  border-radius: 12px;
-  padding: 30px;                 /* More padding */
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+  background-color: var(--dark-bg);
+  box-shadow: 0 0 30px rgba(166, 25, 46, 0.5);
+  border-radius: 16px;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--absa-red);
+  text-shadow: 0 0 8px var(--absa-red);
+  letter-spacing: 2px;
+  animation: glow 2.5s infinite alternate ease-in-out;
+}
+
+/* Grid container */
+.translator-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
   align-items: center;
-  max-width: 600px;              /* Wider container */
-  min-height: 450px;             /* Taller container */
-  margin: 40px auto;
-  font-family: 'Courier New', Courier, monospace;
 }
 
-
+/* Boxes */
 .box {
-  flex: 1;
-  min-width: 140px;
-  max-width: 400px;
+  flex: 1 1 400px;
+  background: var(--box-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
   display: flex;
   flex-direction: column;
-  width: 100%;
+  gap: 1rem;
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  cursor: default;
 }
 
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px var(--absa-red);
+}
+
+/* Headings inside boxes */
+.box h3 {
+  margin: 0;
+  color: var(--absa-red);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 6px var(--absa-red);
+}
+
+/* Textareas */
 textarea {
   width: 100%;
-  min-height: 100px;
+  height: 120px;
+  padding: 1rem;
+  background: var(--textarea-bg);
+  color: var(--text-color);
+  border: 2px solid transparent;
   border-radius: 8px;
-  border: 1px solid #aa0033;  /* ABSA red */
-  background-color: #111;      /* Dark background for textarea */
-  color: rgb(0, 225, 255);                /* White text */
-  padding: 12px;
-  resize: vertical;
   font-size: 1rem;
+  font-family: monospace;
+  resize: vertical;
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
+textarea:focus {
+  outline: none;
+  border-color: var(--absa-red);
+  box-shadow: 0 0 8px var(--absa-red);
+}
+
+/* Buttons */
 button {
-  background-color: #aa0033;  /* ABSA red */
-  color: white;
-  padding: 10px 16px;
+  padding: 0.75rem 1rem;
   border: none;
   border-radius: 8px;
+  background-color: var(--absa-red);
+  color: white;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s;
-  font-size: 0.9rem;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  box-shadow: 0 4px 10px rgba(166, 25, 46, 0.6);
 }
 
-button:hover {
-  background-color: #880027;
+button:hover:not(:disabled) {
+  background-color: #d32f3b;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(166, 25, 46, 0.8);
 }
 
-h3 {
-  color: #aa0033;  /* ABSA red */
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
+/* Clear button */
 .clear-box {
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1.5rem;
 }
 
 .clear-button {
-  background-color: #aa0033;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-  min-width: 140px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--absa-red);
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(166, 25, 46, 0.7);
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
 }
 
 .clear-button:hover {
-  background-color: #880027;
+  background-color: #d32f3b;
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(166, 25, 46, 0.9);
 }
 
-/* 🧾 Footer Style */
-.footer {
-  margin-top: 30px;
+/* Error message */
+.error-message {
+  margin-top: 1rem;
+  color: var(--error-color);
+  font-weight: bold;
   text-align: center;
-  font-size: 0.85rem;
-  color: #aaa;  /* lighter text for footer */
+  animation: shake 0.3s ease-in-out;
 }
 
-/* 🔴 Morse code inspired animated background inside translator-wrapper */
-.translator-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle, rgba(255, 0, 0, 0.3) 2px, transparent 2.5px);
-  background-size: 20px 20px;
-  animation: morseBlink 1.5s infinite ease-in-out;
-  z-index: -1;
-  opacity: 0.05;
+/* Footer */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0;
+  color: #ccc;
+  font-size: 0.9rem;
+  font-style: italic;
+  user-select: none;
+  border-top: 1px solid #333;
 }
 
-.translator-wrapper {
-  position: relative; /* Needed for ::before layering */
-}
-
-/* Morse blinking pulse effect */
-@keyframes morseBlink {
-  0%, 100% {
-    opacity: 0.05;
+/* Animations */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px var(--absa-red);
   }
-  50% {
-    opacity: 0.15;
+  to {
+    text-shadow: 0 0 20px var(--absa-red);
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-6px); }
+}

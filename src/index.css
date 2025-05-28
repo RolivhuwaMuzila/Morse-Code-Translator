@@ -1,22 +1,25 @@
-/* index.css
+/* index.css */
+
+/* Reset and base setup */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically */
-  background-color: #121212; /* optional: dark background for whole page */
+  background-color: #121212;
   font-family: 'Courier New', Courier, monospace;
 }
 
+/* Centering wrapper for specific layouts (optional usage) */
+body {
+  display: flex;
+  flex-direction: column;
+}
 
-/* reusable utility classes*/
+/* Global utility classes */
 .text-center {
   text-align: center;
 }
@@ -25,7 +28,7 @@ body, html {
   margin-top: 0.5rem;
 }
 
-/* global link styling, */
+/* Global links */
 a {
   text-decoration: none;
   color: inherit;
